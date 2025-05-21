@@ -1,6 +1,6 @@
-# specification
+# :3c specification
 
-this is a 2D esolang. the program pointer starts in the upper left corner (0, 0)
+:3c is a 2D esolang. the program pointer starts in the upper left corner (0, 0)
 
 ## memory
 there are 2 methods used to store values, the stack and the line array.
