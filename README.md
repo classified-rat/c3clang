@@ -21,6 +21,7 @@ instruction.
 | _           | gets user input and puts it on the stack                        |
 | :           | pushes next value to top of stack as a string                   |
 | d           | duplicate top of stack                                          |
+| $           | separate string at top of stack into many stack entries         |
 | /           | pops from the stack                                             |
 | +           | adds top 2 values on stack                                      |
 | *           | multiply top 2 numbers on stack                                 |
@@ -100,4 +101,16 @@ _i_iV
 _a:+a-+x:+a+:-a-+x:-a+:*a-+x:*a+:/a-+xV
 V      /+.q      /-+.q     /*.q      /&*.q
 >:unrecognized operation:|.q
+```
+
+## reverse string
+```
+:4J                    >skip over character counting function|
+,:0i:1=:a+$V           >insert null before splitting data, adds one character to correct character count|
+:0i,/ /:2=:1i+,//xV    >store 0 then loop until top of stack is 0, keeps track of count in line array|
+       k         /r    >loop and exit condition|
+_:1c$v                 >get user input and length of that input, split the input|
+,/r  :2=:1i-+,/V       >function to store value in the line array initializes to length of input|
++:5=:1i-+x:5cV         >add strings together until all parts are merged
+k        /.q
 ```

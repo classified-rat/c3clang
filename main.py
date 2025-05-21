@@ -59,6 +59,10 @@ try:
         elif instruction == "d":
             stack.append(stack[-1])
 
+        # separate
+        elif instruction == "$":
+            stack.extend(str(stack.pop()))
+
         # pop
         elif instruction == "/":
             stack.pop()
