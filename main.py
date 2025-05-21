@@ -23,7 +23,7 @@ try:
         instruction = code[current_line][index]
         index += 1
         # print(instruction, end="")
-        # print(instruction, stack, vals, feed_mode)
+        print(instruction, stack, vals, feed_mode)
 
         # feed mode
         if feed_mode is not None:
@@ -62,6 +62,16 @@ try:
         # separate
         elif instruction == "$":
             stack.extend(str(stack.pop()))
+
+        # lshift
+        elif instruction == "[":
+            string = str(stack.pop())
+            stack.append(string[1:] + string[0])
+
+        # rshift
+        elif instruction == "]":
+            string = str(stack.pop())
+            stack.append(string[-1] + string[:-2])
 
         # pop
         elif instruction == "/":

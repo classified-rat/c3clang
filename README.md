@@ -15,34 +15,36 @@ by the line number. The line array can be indexed and retrieved from using the `
 instruction.
 
 ## instructions
-| instruction | purpose                                                         |
-|-------------|-----------------------------------------------------------------|
-| q           | ends the program                                                |
-| _           | gets user input and puts it on the stack                        |
-| :           | pushes next value to top of stack as a string                   |
-| d           | duplicate top of stack                                          |
-| $           | separate string at top of stack into many stack entries         |
-| /           | pops from the stack                                             |
-| +           | adds top 2 values on stack                                      |
-| *           | multiply top 2 numbers on stack                                 |
-| -           | negates number on top of stack                                  |
-| &           | get inverse of number on top of stack                           |
-| .           | prints value on top of stack                                    |
-| ,           | store top of stack into the line array indexed with line number |
-| =           | gets value from the line array in top of stack                  | 
-| i           | converts value on top of stack to int                           |
-| a           | convert letter to utf-8 value                                   | 
-| A           | converts utf-8 to character                                     |
-| v           | move pointer down one line                                      |
-| V           | move pointer down a line and go to start of line                |
-| k           | move pointer up                                                 |
-| K           | move pointer up and to start of line                            |
-| j           | jump to a line (keeps index)                                    |
-| J           | jump to a line (goes to index 0)                                |
-| x           | if top of stack is 0, move down a line                          |
-| c           | call to line number from stack                                  |
-| r           | return from call                                                |
-| \>          | enter feed mode                                                 |
+| instruction | purpose                                                                      |
+|-------------|------------------------------------------------------------------------------|
+| q           | ends the program                                                             |
+| _           | gets user input and puts it on the stack                                     |
+| :           | pushes next value to top of stack as a string                                |
+| d           | duplicate top of stack                                                       |
+| $           | separate string at top of stack into many stack entries                      |
+| [           | shift characters in string to the left, placing first character at the end   |
+| ]           | shift characters in string to the right, placing last character at the start |
+| /           | pops from the stack                                                          |
+| +           | adds top 2 values on stack                                                   |
+| *           | multiply top 2 numbers on stack                                              |
+| -           | negates number on top of stack                                               |
+| &           | get inverse of number on top of stack                                        |
+| .           | prints value on top of stack                                                 |
+| ,           | store top of stack into the line array indexed with line number              |
+| =           | gets value from the line array in top of stack                               | 
+| i           | converts value on top of stack to int                                        |
+| a           | convert letter to utf-8 value                                                | 
+| A           | converts utf-8 to character                                                  |
+| v           | move pointer down one line                                                   |
+| V           | move pointer down a line and go to start of line                             |
+| k           | move pointer up                                                              |
+| K           | move pointer up and to start of line                                         |
+| j           | jump to a line (keeps index)                                                 |
+| J           | jump to a line (goes to index 0)                                             |
+| x           | if top of stack is 0, move down a line                                       |
+| c           | call to line number from stack                                               |
+| r           | return from call                                                             |
+| \>          | enter feed mode                                                              |
 
 ## feed mode
 
