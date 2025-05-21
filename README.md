@@ -30,7 +30,8 @@ instruction.
 | ,           | store top of stack into the line array indexed with line number |
 | =           | gets value from the line array in top of stack                  | 
 | i           | converts value on top of stack to int                           |
-| a           | convert letter to utf value                                     | 
+| a           | convert letter to utf-8 value                                   | 
+| A           | converts utf-8 to character                                     |
 | v           | move pointer down one line                                      |
 | V           | move pointer down a line and go to start of line                |
 | k           | move pointer up                                                 |
@@ -72,6 +73,12 @@ when it encounters another `:` load mode is exited back in to step mode
 ```
 _ix:1i-+xq  V
 > .q|   :1./k
+```
+
+## count from 1 to 10
+```
+:0i:1i+d:0:1+i-+x/.V
+   k            /.q
 ```
 
 ## fibonacci sequence up to n=10

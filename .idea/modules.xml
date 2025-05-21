@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/shearlang.iml" filepath="$PROJECT_DIR$/.idea/shearlang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/c3clang.iml" filepath="$PROJECT_DIR$/.idea/c3clang.iml" />
     </modules>
   </component>
 </project>

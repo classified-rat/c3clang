@@ -81,7 +81,7 @@ try:
 
         # print top of stack
         elif instruction == ".":
-            print(stack[-1])
+            print(stack[-1], end="")
 
         # store value in top of stack
         elif instruction == ",":
@@ -98,6 +98,10 @@ try:
         # convert top of stack to ascii value
         elif instruction == "a":
             stack.append(int(str(stack.pop()).encode().hex(), 16))
+
+        # convert top of stack to ascii value
+        elif instruction == "A":
+            stack.append(chr(stack.pop()))
 
         # go down a line
         elif instruction == "v":
