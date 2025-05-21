@@ -8,7 +8,7 @@ else:
     target_file: str = "main.txt"
 
 with open(target_file, "r") as FILE:
-    code: str = FILE.readlines()
+    code: list[str] = FILE.readlines()
 
 vals: list = [0 for _ in range(len(code))]
 current_line: int = 0
